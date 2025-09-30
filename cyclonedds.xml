@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <CycloneDDS>
-  <Domain id="2">
-    <!-- <General>
-        <ExternalNetworkAddress>172.31.1.250</ExternalNetworkAddress>
+  <Domain>
+    <General>
+        <DontRoute>true</DontRoute>        
         <AllowMulticast>false</AllowMulticast>
-    </General> -->
+        <EnableMulticastLoopback>true</EnableMulticastLoopback>
+    </General>
     <Discovery>
       <Peers>
-        <Peer Address="udp/172.31.1.96"/>
-        <Peer Address="udp/172.31.1.97"/>
-        <Peer Address="udp/172.31.1.98"/>
-        <Peer Address="udp/172.31.1.99"/>
-        <Peer Address="udp/172.31.1.250"/>
-        <Peer Address="udp/172.31.1.252"/>
+        <Peer Address="172.31.1.96"/>
+        <Peer Address="172.31.1.97"/>
+        <Peer Address="172.31.1.98"/>
+        <Peer Address="172.31.1.99"/>
+        <Peer Address="172.31.1.250"/>
+        <Peer Address="172.31.1.252"/>
       </Peers>
     </Discovery>
+    <Tracing>
+      <Verbosity>info</Verbosity>
+      <OutputFile>stdout</OutputFile>
+    </Tracing>
   </Domain>
 </CycloneDDS>
