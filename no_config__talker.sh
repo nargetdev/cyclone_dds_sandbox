@@ -1,7 +1,6 @@
 #!/bin/bash
-docker run -v ./cyclonedds.xml:/cyclonedds.xml \
+docker run \
     -e RMW_IMPLEMENTATION=rmw_cyclonedds_cpp  \
-    -e CYCLONEDDS_URI=file:///cyclonedds.xml \
     -e ROS_DOMAIN_ID=2 \
     -it --rm --network host \
     jazzy-talker

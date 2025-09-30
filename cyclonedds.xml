@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <CycloneDDS>
-  <Domain id="27">
-    <General>
-      <NetworkInterfaceAddress>172.31.1/24</NetworkInterfaceAddress>
-    </General>
+  <Domain id="2">
+    <!-- <General>
+        <ExternalNetworkAddress>172.31.1.250</ExternalNetworkAddress>
+        <AllowMulticast>false</AllowMulticast>
+    </General> -->
     <Discovery>
       <Peers>
         <Peer Address="udp/172.31.1.96"/>
