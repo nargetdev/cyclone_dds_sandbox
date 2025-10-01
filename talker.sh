@@ -6,4 +6,4 @@ docker run -v $(pwd)/cyclonedds.1.xml:/cyclonedds.xml \
     -p 7412:7412/udp \
     -p 7413:7413/udp \
     --name talker \
-    jazzy-talker ros2 run demo_nodes_cpp talker --ros-args -r __node:=mac_talker -p participantindex:=1
+    jazzy-talker ros2 run demo_nodes_cpp talker --ros-args -r __node:=mac_talker

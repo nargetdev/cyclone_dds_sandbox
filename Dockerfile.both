@@ -1,0 +1,23 @@
+FROM arm64v8/ros:jazzy
+
+# Install demo nodes and CycloneDDS RMW
+RUN apt update && apt install -y \
+    ros-jazzy-demo-nodes-cpp \
+    ros-jazzy-rmw-cyclonedds-cpp \
+    && rm -rf /var/lib/apt/lists/*
+
+# Optional debugging tools
+RUN apt-get update && apt-get install -y net-tools iputils-ping && rm -rf /var/lib/apt/lists/*
+
+# Copy runtime script
+COPY run.sh /usr/local/bin/run.sh
+RUN chmod +x /usr/local/bin/run.sh
+
+# Copy CycloneDDS config to standard location in image; can be overridden by bind mount
+COPY cyclonedds.0.xml /etc/cyclonedds.0.xml
+COPY cyclonedds.1.xml /etc/cyclonedds.1.xml
+
+ENV RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
+
+ENTRYPOINT ["/usr/local/bin/run.sh"]
+
