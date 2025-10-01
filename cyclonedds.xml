@@ -5,6 +5,9 @@
         <DontRoute>true</DontRoute>        
         <AllowMulticast>false</AllowMulticast>
         <EnableMulticastLoopback>true</EnableMulticastLoopback>
+        <Interfaces>
+            <NetworkInterface address="172.31.1.250"/>
+        </Interfaces>
     </General>
     <Discovery>
       <Peers>
