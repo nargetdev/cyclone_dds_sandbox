@@ -11,7 +11,7 @@
         <Peer address="100.113.240.107"/>
         <Peer address="100.122.84.122"/>
       </Peers>
-            <ParticipantIndex>1</ParticipantIndex>
+            <ParticipantIndex>0</ParticipantIndex>
     </Discovery>
   </Domain>
 </CycloneDDS>
