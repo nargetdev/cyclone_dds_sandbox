@@ -6,7 +6,10 @@ RUN apt update && apt install -y ros-jazzy-demo-nodes-cpp
 RUN apt-get install -y ros-jazzy-rmw-cyclonedds-cpp
 
 # for debug..
-RUN apt install net-tools iputils-ping -y
+RUN apt install netcat-openbsd net-tools iputils-ping -y
+
+ENV ROS_DISCOVERY_SERVER=100.87.248.120:11811
+ENV RMW_IMPLEMENTATION=rmw_fastrtps_cpp
 
 # Set the default command to run the demo node
 # Note: You'll need to specify which demo node to run
