@@ -3,7 +3,7 @@
   <Domain>
     <General>
       <AllowMulticast>false</AllowMulticast>
-      <ExternalNetworkAddress>100.122.84.122</ExternalNetworkAddress>
+      <ExternalNetworkAddress>100.87.248.120</ExternalNetworkAddress>
     </General>
     <Discovery>
       <Peers>
@@ -12,7 +12,7 @@
         <Peer address="100.122.84.122"/>
         <Peer address="100.87.248.120"/>
       </Peers>
-        <ParticipantIndex>0</ParticipantIndex>
+        <ParticipantIndex>1</ParticipantIndex>
     </Discovery>
   </Domain>
 </CycloneDDS>

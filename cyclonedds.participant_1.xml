@@ -10,6 +10,7 @@
         <Peer address="100.127.245.32"/>
         <Peer address="100.113.240.107"/>
         <Peer address="100.122.84.122"/>
+        <Peer address="100.87.248.120"/>
       </Peers>
         <ParticipantIndex>1</ParticipantIndex>
     </Discovery>
