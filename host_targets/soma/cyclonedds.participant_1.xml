@@ -14,5 +14,8 @@
       </Peers>
         <ParticipantIndex>1</ParticipantIndex>
     </Discovery>
+  <Compatibility>
+    <ManySocketsMode>false</ManySocketsMode>
+  </Compatibility>
   </Domain>
 </CycloneDDS>

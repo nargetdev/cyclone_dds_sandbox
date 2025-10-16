@@ -8,8 +8,11 @@ RUN apt-get install -y ros-jazzy-rmw-cyclonedds-cpp
 # for debug..
 RUN apt install netcat-openbsd net-tools iputils-ping -y
 
-ENV ROS_DISCOVERY_SERVER=100.87.248.120:11811
-ENV RMW_IMPLEMENTATION=rmw_fastrtps_cpp
+# Copy CycloneDDS config to standard location in image; can be overridden by bind mount
+COPY cyclonedds.participant_0.xml /etc/cyclonedds.participant_0.xml
+COPY cyclonedds.participant_1.xml /etc/cyclonedds.participant_1.xml
+
+ENV RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 
 # Set the default command to run the demo node
 # Note: You'll need to specify which demo node to run
