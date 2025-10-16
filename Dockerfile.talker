@@ -1,4 +1,4 @@
-FROM arm64v8/ros:jazzy
+FROM ros:jazzy
 
 # Update package list and install demo nodes
 RUN apt update && apt install -y ros-jazzy-demo-nodes-cpp

@@ -1,4 +1,4 @@
-FROM arm64v8/ros:jazzy
+FROM ros:jazzy
 
 # Install demo nodes and CycloneDDS RMW
 RUN apt update && apt install -y \
