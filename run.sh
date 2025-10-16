@@ -13,16 +13,16 @@ export RMW_IMPLEMENTATION=rmw_cyclonedds_cpp
 
 # Start listener and talker concurrently
 set -m
-CYCLONEDDS_URI=file:///etc/cyclonedds.0.xml ros2 run demo_nodes_cpp listener --ros-args -r __node:=container_listener &
+CYCLONEDDS_URI=file:///etc/cyclonedds.participant_0.xml ros2 run demo_nodes_cpp listener --ros-args -r __node:=container_listener &
 LISTENER_PID=$!
 
-CYCLONEDDS_URI=file:///etc/cyclonedds.1.xml ros2 run demo_nodes_cpp talker --ros-args -r __node:=container_talker &
+CYCLONEDDS_URI=file:///etc/cyclonedds.participant_1.xml ros2 run demo_nodes_cpp talker --ros-args -r __node:=container_talker &
 TALKER_PID=$!
 
-# CYCLONEDDS_URI=file:///etc/cyclonedds.0.xml ros2 run demo_nodes_cpp listener &
+# CYCLONEDDS_URI=file:///etc/cyclonedds.participant_0.xml ros2 run demo_nodes_cpp listener &
 # LISTENER_PID=$!
 
-# CYCLONEDDS_URI=file:///etc/cyclonedds.1.xml ros2 run demo_nodes_cpp talker &
+# CYCLONEDDS_URI=file:///etc/cyclonedds.participant_1.xml ros2 run demo_nodes_cpp talker &
 # TALKER_PID=$!
 
 

@@ -6,8 +6,8 @@ IMAGE_NAME="jazzy-both"
 docker build -f Dockerfile.both -t ${IMAGE_NAME} .
 
 docker run \
-  -v $(pwd)/cyclonedds.0.xml:/etc/cyclonedds.0.xml:ro \
-  -v $(pwd)/cyclonedds.1.xml:/etc/cyclonedds.1.xml:ro \
+  -v $(pwd)/cyclonedds.participant_0.xml:/etc/cyclonedds.participant_0.xml:ro \
+  -v $(pwd)/cyclonedds.participant_1.xml:/etc/cyclonedds.participant_1.xml:ro \
   -it --rm \
   -p 7410:7410/udp \
   -p 7411:7411/udp \

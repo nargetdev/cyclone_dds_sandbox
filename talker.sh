@@ -1,5 +1,5 @@
 #!/bin/bash
-docker run -v $(pwd)/cyclonedds.1.xml:/cyclonedds.xml \
+docker run -v $(pwd)/cyclonedds.participant_1.xml:/cyclonedds.xml \
     -e RMW_IMPLEMENTATION=rmw_cyclonedds_cpp  \
     -e CYCLONEDDS_URI=file:///cyclonedds.xml \
     -it --rm \
